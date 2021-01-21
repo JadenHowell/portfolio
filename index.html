@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <title>Jaden Howell</title>
-    </head>
+<html>
+  <head>
+    <title>Jaden Howell</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
 
-    <body>
+  <body>
+    <ul id='navbar'>
+      <li class='nav-choice'><a href="google.com">Home</a></li>
+      <li class='nav-choice'><a href="google.com">Other</a></li>
+      <li class='nav-choice'><a href="google.com">Contact</a></li>
+    </ul>
+    <div class='page'>
         <h1>ABOUT ME</h1>
-        <p>
+        <p class='about'>
             Hi, I'm Jaden Howell. I'm currently studying at BYU
             (Brigham Young University) to be a Software Engineer.
             In my free time, I enjoy cooking, playing games with family 
@@ -17,7 +24,7 @@
         <p>
             My most recent projects have been:
         </p>
-        <ol>
+        <ol id='projects'>
             <li>Natural Selection Simulation</li>
             <li>Conway's Game of Life Tracker</li>
             <li>An app to explore family history information worldwide</li>
@@ -25,15 +32,18 @@
 
         <h2>Experience</h2>
         <p>Professional work experience:</p>
-        <ul>
+        <ul id='experience'>
             <li>Computer Science Instructor at Juni Learning</li>
             <li>Shift Supervisor at Rodizio Grill</li>
         </ul>
         
         <hr/>
 
-        <h3>Contact me and see my work at:</h3>
-        <p><a href='https://www.linkedin.com/in/jaden-howell-3587591a9/'>Linkedin</a></p>
-        <p><a href='https://github.com/JadenHowell'>GitHub</a></p>
-    </body>
-  </html>
+        <div class='bottom'>
+          <P><strong>Contact me and see my work at:</strong></p>
+          <a class='button' href='https://www.linkedin.com/in/jaden-howell-3587591a9/'>Linkedin</a>
+          <a class='button' href='https://github.com/JadenHowell'>GitHub</a>
+        </div>
+      </div>
+  </body>
+</html>
