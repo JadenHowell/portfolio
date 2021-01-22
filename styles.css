@@ -1,105 +1,167 @@
-body {
-  color: #414141;    /* this determines the color of the text in the body */
-  background-color: #c8f7e7;    /* this determines the background color of the body */
-  font-size: 14px; /* This sets base text size */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.page{
-    width:800px;
-    margin: 0 auto;
-}
-
-.bottom{
-    width: 600px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h1, h2{
-  text-align: center;
+body{
+    font-size: 16px;
+    color:  #4d4746;
+    background-color: #c8f7e7;
 }
 
 h1{
-  font-size: 2.5em;
-  margin-top: 40px;
+    font-size: 2.2em;
 }
-
 h2{
-  color: #4d4746;
+    font-size: 1.7em;
+}
+h3{
+    font-size: 1.3em;
 }
 
-.about{
-  font-size: 1.2em;
-  line-height: 25px;
-}
-
-p:last-of-type{
-    margin-bottom: 30px;
-}
-
-.nav-choice{
-  display: block;
-  float: left; /*This allows them to slide into each other, no space between them*/
-  padding: 8px;
-  border-right: 1px solid #4d4746; /* put a line between all the elements */
-}
-
-.nav-choice:last-child{
-  border-right: none; /*last item shouldn't have a line on it's right side*/
-}
-
-.nav-choice:active {
-  background-color: #3bbf91;
-}
-
-.nav-choice:hover{
-  background-color: #8ff2cf;
+a:link{
+    text-decoration: none;
+    color:  #4d4746;
 }
 
 #navbar{
-  list-style-type: none;
-  position: fixed;
-  background-color: #71ebc0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  top: 0;
-  left: 0;
+    list-style-type: none;
+    position: fixed;
+    background-color: #71ebc0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    border: 1px solid #3bbf91;
+    display: flex;
+}
+.nav-choice{
+    display: block;
+    float: left; /*This allows them to slide into each other, no space between them*/
+    padding: 8px;
+    border-right: 1px solid #4d4746; /* put a line between all the elements */
+}   
+.nav-choice:active {
+    text-decoration: none;
+    background-color: #3bbf91;
+}  
+.nav-choice:hover{
+    text-decoration: none;
+    background-color: #8ff2cf;
+}
+.nav-choice:last-child{
+    text-decoration: none;
+    border-right: none; /*last item shouldn't have a line on it's right side*/
+} 
+
+.menu-bar{
+    height: 50px;
 }
 
-#projects{
-  list-style-type: lower-roman;
+.page{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-items: center;
+    margin: 0 auto;
 }
 
-#experience{
-  list-style-type: circle;
+.main-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    width:100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.synopsis{
+    font-size: 1.1em;
+    width: 80%;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
 
-.button:link,                
-.button:visited {   
-  text-decoration: none;     
-  justify-content: center;
-
-  color: #FFF;               
-  background-color: #5995DA;
-  font-weight: bold;
-  padding: 20px;
-  text-align: center;
-  border: 2px solid #5D6063;
-  border-radius: 5px;
-
-  width: 200px;
-  margin: 30px auto;
+.listed-info{
+    width: 100%;
+    display: flex;
+}
+#projects-list{
+    list-style-type: lower-roman;
+}
+#experience-list{
+    list-style-type: none;
+}
+.experience-block{
+    text-align: right;
+    font-size: 1.1em;
+}
+.projects-block{
+    font-size: 1.1em;
 }
 
+.bottom{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items:center;
+}
+.button-pair{
+    display:flex;
+    width:100%;
+    justify-content: center;
+}
+
+.button {
+    background-color: #5995DA;
+    margin: 5px 15px;
+    border: 2px solid;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px; /*This gives a curved corner*/
+}
 .button:hover,
 .button:visited:hover {
   color: #FFF;
   background-color: #76AEED;  /* Light blue */
 }
-
 .button:active,
 .button:visited:active {
   color: #FFF;
   background-color: #5995DA;  /* Blue */
+}
+
+/*for mobile*/
+@media only screen and (max-width: 800px) {
+    .listed-info{
+        flex-wrap: wrap;
+    }
+    .projects-block,
+    .experience-block{
+        width:100%;
+    }
+    .button{
+        width: 40%;
+    }
+}
+/*for tablets and desktops*/
+@media only screen and (min-width: 801px) {
+    .page{
+        width: 800px;
+    }
+    .projects-block,
+    .experience-block{
+        width:50%;
+    }
+    .button{
+        width: 15%;
+    }
 }
